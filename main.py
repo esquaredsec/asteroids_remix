@@ -5,7 +5,6 @@ from asteroidfield import AsteroidField
 from asteroid import Asteroid
 from logger import log_event
 from shot import Shot
-from circleshape import CircleShape
 
 import sys
 import pygame
