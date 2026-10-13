@@ -6,6 +6,7 @@ import random
 import pygame
 
 class Asteroid(CircleShape):
+    
     def __init__(self, x: float, y: float, radius: float) -> None:
         super().__init__(x, y, radius)
 
@@ -17,6 +18,7 @@ class Asteroid(CircleShape):
 
     def split(self):
         self.kill()
+        
         if self.radius <= ASTEROID_MIN_RADIUS:
             return
 
