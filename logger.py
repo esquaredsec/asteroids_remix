@@ -11,11 +11,9 @@ class SpriteInfo(TypedDict):
     rad: NotRequired[float]
     rot: NotRequired[float]
 
-
 class GroupInfo(TypedDict):
     count: int
     sprites: list[SpriteInfo]
-
 
 __all__ = ["log_state", "log_event"]
 
@@ -27,7 +25,6 @@ _frame_count = 0
 _state_log_initialized = False
 _event_log_initialized = False
 _start_time = datetime.now()
-
 
 def log_state() -> None:
     global _frame_count, _state_log_initialized
