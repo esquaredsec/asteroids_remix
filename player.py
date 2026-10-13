@@ -16,10 +16,9 @@ class Player(CircleShape):
         a = self.position + forward * self.radius
         b = self.position - forward * self.radius - right
         c = self.position - forward * self.radius + right
-        return a, b, c
+        return [a, b, c]
         
-    def draw(self, screen: pygame.draw.polygon) -> None:
-        # must override
+    def draw(self, screen: pygame.draw.polygon):
         pygame.draw.polygon(screen, "white", self.triangle(), LINE_WIDTH)
     
     def rotate(self, dt) -> None:
